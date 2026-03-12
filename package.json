@@ -1,0 +1,38 @@
+{
+  "name": "vscode-secret-vault-extension",
+  "displayName": "VSCode Secret Vault Extension",
+  "description": "Detect hardcoded secrets in code and migrate them to Vault or Secrets Manager.",
+  "version": "0.0.1",
+  "publisher": "ajaysheri",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Security"
+  ],
+  "activationEvents": [
+    "onCommand:secretVault.scanSecrets"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "secretVault.scanSecrets",
+        "title": "Secret Vault: Scan Current File"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "axios": "^1.6.8"
+  }
+}
