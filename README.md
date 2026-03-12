@@ -1,0 +1,1 @@
+# vscode-secret-vault-extension
